@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人資訊</title>
+  <style>
+    #profile {
+      text-align: center;
+    }
+#profile img {
+      border-radius: 50%;
+      border: 2px solid transparent;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  </style>
+</head>
+<body>
+<img id='img' src="1/2.jpg">
+<div id="profile">
+  <h1 id="studentNumber">學號: 91018135</h1>
+  <h2 id="name">姓名: 陳柏翰</h2>
+  <img id="avatar" src="1/1.jpg" alt="大頭照">
+  <br>
+  <button onclick="adjustText()">調整字體和顏色</button>
+  <button onclick="adjustAvatar()">調整大頭照外觀</button>
+  <button onclick="changeAvatar()">換圖</button>
+</div>
+
+<script>
+  function adjustText() {
+    var studentNumberElement = document.getElementById('studentNumber');
+    var nameElement = document.getElementById('name');
+
+    // 調整字體和顏色
+    studentNumberElement.style.fontSize = '24px';
+    studentNumberElement.style.color = 'blue';
+    nameElement.style.fontSize = '20px';
+    nameElement.style.color = 'green';
+  }
+
+  function adjustAvatar() {
+    var avatarElement = document.getElementById('avatar');
+
+    // 調整大頭照外觀
+    avatarElement.style.border = '2px solid red';
+  }
+
+  function changeAvatar() {
+    var avatarElement = document.getElementById('avatar');
+
+    // 換圖
+    avatarElement.src = '1.jpg';
+  }
+</script>
+
+</body>
+</html>
